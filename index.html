@@ -21,14 +21,14 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <div class="container-fluid">
+      <div class="container-fluid mx-0 px-3">
         <a class="navbar-brand d-block d-md-none" href="#"
           ><img id="small-logo" src="./img/mobile-logo.png" alt=""
         /></a>
         <a class="navbar-brand d-none d-md-block" href="#"
           ><img src="./img/logo.svg" alt=""
         /></a>
-        <form class="d-flex w-100">
+        <form class="d-flex w-75">
           <input
             class="form-control me-2"
             type="search"
@@ -36,19 +36,26 @@
             aria-label="Search"
           />
         </form>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="nav-item dropdown my-2 d-lg-none">
+          <a
+            class="nav-link"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            ><i class="fa-solid fa-bell" style="color: #ffae00"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Profilo</a></li>
+            <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Logout</a>
+            </li>
+          </ul>
+        </ul>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-none d-lg-flex">
             <li class="nav-item">
               <a class="nav-link" href="#"
                 ><i class="fa-solid fa-list-ul"></i
@@ -66,7 +73,7 @@
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -86,51 +93,262 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid">
-      <div class="row">
-        <nav
-          class="sidebar-bg sidebar py-3 d-flex justify-content-between flex-column align-items-center"
+    <div class="container mx-0 px-0 d-flex">
+      <nav
+        class="sidebar-bg sidebar py-3 d-flex justify-content-between flex-column align-items-center"
+      >
+        <div>
+          <ul class="text-white align-items-start d-flex flex-column px-3">
+            <li class="nav-item py-2">
+              <a class="nav-link" href="#">
+                <span class="ml-2"><i class="fa-solid fa-house"></i></span
+                ><span class="ps-2 d-none d-lg-inline-block">Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="ml-2"
+                  ><i class="fa-solid fa-chart-simple"></i></span
+                ><span class="ps-2 d-none d-lg-inline-block">Stats</span>
+              </a>
+            </li>
+            <li class="nav-item py-2">
+              <a class="nav-link" href="#">
+                <span class="ml-2"><i class="fa-solid fa-signal"></i></span
+                ><span class="ps-2 d-none d-lg-inline-block">Signals</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="text-white px-3">
+            <li class="nav-item py-2">
+              <a class="nav-link" href="#">
+                <span class="ml-2"><i class="fa-solid fa-gear"></i></span
+                ><span class="ps-2 d-none d-lg-inline-block">Admin</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- sidebar content goes in here -->
+      </nav>
+      <main class="main px-0 py-0">
+        <div
+          class="blue-bar lightblue-bg text-white px-2 d-flex flex-column flex-md-row py-2 justify-content-between"
         >
-          <div>
-            <ul class="text-white px-3">
-              <li class="nav-item py-2">
-                <a class="nav-link" href="#">
-                  <span class="ml-2"><i class="fa-solid fa-house"></i></span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span class="ml-2"
-                    ><i class="fa-solid fa-chart-simple"></i
-                  ></span>
-                </a>
-              </li>
-              <li class="nav-item py-2">
-                <a class="nav-link" href="#">
-                  <span class="ml-2"><i class="fa-solid fa-signal"></i></span>
-                </a>
-              </li>
-            </ul>
+          <div class="dash-title py-2 px-2 order-1 order-md-0 d-flex">
+            <h2>Boolean</h2>
           </div>
-          <div>
-            <ul class="text-white px-3">
-              <li class="nav-item py-2">
-                <a class="nav-link" href="#">
-                  <span class="ml-2"><i class="fa-solid fa-gear"></i></span>
-                </a>
-              </li>
-            </ul>
+          <div class="students py-2 px-2 order-1 order-md-0">
+            <p>Studenti online negli ultimi 30 minuti</p>
+            <h3>125</h3>
           </div>
-          <!-- sidebar content goes in here -->
-        </nav>
-        <main class="main px-0 py-0">
-          <div class="blue-bar lightblue-bg">
-            <div>
-              <h1>CIAO</h1>
-            </div>
+          <div class="new-student py-2 px-2 order-0 order-md-1">
+            <p>
+              Nuovo Studente
+              <i class="fa-regular fa-square-plus fa-2xl ps-2"></i>
+            </p>
           </div>
-        </main>
-      </div>
+        </div>
+        <div class="prossime-classi px-3 my-4">
+          <div class="card" style="width: m-auto">
+            <div class="card-header"><h3>Prossime classi</h3></div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col ">Nome</th>
+                  <th scope="col">Stato</th>
+                  <th scope="col">Azioni</th>
+                  <th scope="col">ROI</th>
+                  <th scope="col">Data inizio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      id="class-logo"
+                      src="./img/class-avatar.jpg"
+                      alt=""
+                    />Classe 75
+                  </td>
+                  <td><span class="badge text-bg-success">Done</span></td>
+                  <td>
+                    <i
+                      class="fa-solid fa-pen action-icon me-2"
+                      style="color: #8e969f"
+                    ></i
+                    ><i
+                      class="fa-solid fa-trash action-icon"
+                      style="color: #8e969f"
+                    ></i>
+                  </td>
+                  <td>20%</td>
+                  <td>15 Feb 2021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      id="class-logo"
+                      src="./img/class-avatar.jpg"
+                      alt=""
+                    />Classe 76
+                  </td>
+                  <td><span class="badge text-bg-success">Done</span></td>
+                  <td>
+                    <i
+                      class="fa-solid fa-pen action-icon me-2"
+                      style="color: #8e969f"
+                    ></i
+                    ><i
+                      class="fa-solid fa-trash action-icon"
+                      style="color: #8e969f"
+                    ></i>
+                  </td>
+                  <td>20%</td>
+                  <td>16 Feb 2021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      id="class-logo"
+                      src="./img/class-avatar.jpg"
+                      alt=""
+                    />Classe 77
+                  </td>
+                  <td>
+                    <span class="badge text-bg-warning text-white"
+                      >process</span
+                    >
+                  </td>
+                  <td>
+                    <i
+                      class="fa-solid fa-pen action-icon me-2"
+                      style="color: #8e969f"
+                    ></i
+                    ><i
+                      class="fa-solid fa-trash action-icon"
+                      style="color: #8e969f"
+                    ></i>
+                  </td>
+                  <td>20%</td>
+                  <td>17 Feb 2021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      id="class-logo"
+                      src="./img/class-avatar.jpg"
+                      alt=""
+                    />Classe 78
+                  </td>
+                  <td><span class="badge text-bg-success">Done</span></td>
+                  <td>
+                    <i
+                      class="fa-solid fa-pen action-icon me-2"
+                      style="color: #8e969f"
+                    ></i
+                    ><i
+                      class="fa-solid fa-trash action-icon"
+                      style="color: #8e969f"
+                    ></i>
+                  </td>
+                  <td>20%</td>
+                  <td>18 Feb 2021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      id="class-logo"
+                      src="./img/class-avatar.jpg"
+                      alt=""
+                    />Classe 79
+                  </td>
+                  <td><span class="badge text-bg-danger">failed</span></td>
+                  <td>
+                    <i
+                      class="fa-solid fa-pen action-icon me-2"
+                      style="color: #8e969f"
+                    ></i
+                    ><i
+                      class="fa-solid fa-trash action-icon"
+                      style="color: #8e969f"
+                    ></i>
+                  </td>
+                  <td>20%</td>
+                  <td>19 Feb 2021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      id="class-logo"
+                      src="./img/class-avatar.jpg"
+                      alt=""
+                    />Classe 80
+                  </td>
+                  <td><span class="badge text-bg-success">Done</span></td>
+                  <td>
+                    <i
+                      class="fa-solid fa-pen action-icon me-2"
+                      style="color: #8e969f"
+                    ></i
+                    ><i
+                      class="fa-solid fa-trash action-icon"
+                      style="color: #8e969f"
+                    ></i>
+                  </td>
+                  <td>20%</td>
+                  <td>20 Feb 2021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      id="class-logo"
+                      src="./img/class-avatar.jpg"
+                      alt=""
+                    />Classe 81
+                  </td>
+                  <td><span class="badge text-bg-danger">failed</span></td>
+                  <td>
+                    <i
+                      class="fa-solid fa-pen action-icon me-2"
+                      style="color: #8e969f"
+                    ></i
+                    ><i
+                      class="fa-solid fa-trash action-icon"
+                      style="color: #8e969f"
+                    ></i>
+                  </td>
+                  <td>20%</td>
+                  <td>21 Feb 2021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      id="class-logo"
+                      src="./img/class-avatar.jpg"
+                      alt=""
+                    />Classe 82
+                  </td>
+                  <td><span class="badge text-bg-success">Done</span></td>
+                  <td>
+                    <i
+                      class="fa-solid fa-pen action-icon me-2"
+                      style="color: #8e969f"
+                    ></i
+                    ><i
+                      class="fa-solid fa-trash action-icon"
+                      style="color: #8e969f"
+                    ></i>
+                  </td>
+                  <td>20%</td>
+                  <td>22 Feb 2021</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
   <script

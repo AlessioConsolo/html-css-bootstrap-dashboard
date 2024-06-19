@@ -19,12 +19,12 @@
 }
 
 .sidebar {
-  width: 100px;
+  width: 80px;
   min-height: calc(100vh - 58px);
 }
 
 .main {
-  width: calc(100vw - 100px);
+  width: calc(100vw - 80px);
 }
 
 #small-logo {
@@ -35,9 +35,26 @@ ul {
   list-style-type: none;
 }
 
-@media screen and (min-width: 1024px);
- {
+.action-icon {
+  border: 1px solid #8e969f;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#class-logo {
+  width: 27px;
+  margin: 0px 10px;
+}
+
+@media (min-width: 768px) {
+  .blue-bar {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
   .sidebar {
     width: 150px;
+    min-height: calc(100vh - 58px);
   }
 }
