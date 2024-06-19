@@ -21,14 +21,14 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <div class="container-fluid mx-0 px-3">
-        <a class="navbar-brand d-block d-md-none" href="#"
+      <div class="container-fluid">
+        <a class="navbar-brand d-block d-md-none col-sm" href="#"
           ><img id="small-logo" src="./img/mobile-logo.png" alt=""
         /></a>
-        <a class="navbar-brand d-none d-md-block" href="#"
-          ><img src="./img/logo.svg" alt=""
+        <a class="navbar-brand d-none d-md-block col col-md-1" href="#"
+          ><img class="w-100" src="./img/logo.svg" alt=""
         /></a>
-        <form class="d-flex w-75">
+        <form class="d-flex col-3 col-md-7 col-lg-10">
           <input
             class="form-control me-2"
             type="search"
@@ -36,7 +36,9 @@
             aria-label="Search"
           />
         </form>
-        <ul class="nav-item dropdown my-2 d-lg-none">
+        <ul
+          class="nav-item dropdown my-2 d-md-none col-sm ms-auto d-flex justify-content-end"
+        >
           <a
             class="nav-link"
             href="#"
@@ -54,8 +56,8 @@
             </li>
           </ul>
         </ul>
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-none d-lg-flex">
+        <div class="collapse navbar-collapse col col-md-1 d-none d-lg-flex">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="#"
                 ><i class="fa-solid fa-list-ul"></i
@@ -93,7 +95,7 @@
         </div>
       </div>
     </nav>
-    <div class="container mx-0 px-0 d-flex">
+    <div class="container-fluid mx-0 px-0 d-flex">
       <nav
         class="sidebar-bg sidebar py-3 d-flex justify-content-between flex-column align-items-center"
       >
@@ -150,204 +152,229 @@
             </p>
           </div>
         </div>
-        <div class="prossime-classi px-3 my-4">
-          <div class="card" style="width: m-auto">
-            <div class="card-header"><h3>Prossime classi</h3></div>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col ">Nome</th>
-                  <th scope="col">Stato</th>
-                  <th scope="col">Azioni</th>
-                  <th scope="col">ROI</th>
-                  <th scope="col">Data inizio</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <img
-                      id="class-logo"
-                      src="./img/class-avatar.jpg"
-                      alt=""
-                    />Classe 75
-                  </td>
-                  <td><span class="badge text-bg-success">Done</span></td>
-                  <td>
-                    <i
-                      class="fa-solid fa-pen action-icon me-2"
-                      style="color: #8e969f"
-                    ></i
-                    ><i
-                      class="fa-solid fa-trash action-icon"
-                      style="color: #8e969f"
-                    ></i>
-                  </td>
-                  <td>20%</td>
-                  <td>15 Feb 2021</td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      id="class-logo"
-                      src="./img/class-avatar.jpg"
-                      alt=""
-                    />Classe 76
-                  </td>
-                  <td><span class="badge text-bg-success">Done</span></td>
-                  <td>
-                    <i
-                      class="fa-solid fa-pen action-icon me-2"
-                      style="color: #8e969f"
-                    ></i
-                    ><i
-                      class="fa-solid fa-trash action-icon"
-                      style="color: #8e969f"
-                    ></i>
-                  </td>
-                  <td>20%</td>
-                  <td>16 Feb 2021</td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      id="class-logo"
-                      src="./img/class-avatar.jpg"
-                      alt=""
-                    />Classe 77
-                  </td>
-                  <td>
-                    <span class="badge text-bg-warning text-white"
-                      >process</span
-                    >
-                  </td>
-                  <td>
-                    <i
-                      class="fa-solid fa-pen action-icon me-2"
-                      style="color: #8e969f"
-                    ></i
-                    ><i
-                      class="fa-solid fa-trash action-icon"
-                      style="color: #8e969f"
-                    ></i>
-                  </td>
-                  <td>20%</td>
-                  <td>17 Feb 2021</td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      id="class-logo"
-                      src="./img/class-avatar.jpg"
-                      alt=""
-                    />Classe 78
-                  </td>
-                  <td><span class="badge text-bg-success">Done</span></td>
-                  <td>
-                    <i
-                      class="fa-solid fa-pen action-icon me-2"
-                      style="color: #8e969f"
-                    ></i
-                    ><i
-                      class="fa-solid fa-trash action-icon"
-                      style="color: #8e969f"
-                    ></i>
-                  </td>
-                  <td>20%</td>
-                  <td>18 Feb 2021</td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      id="class-logo"
-                      src="./img/class-avatar.jpg"
-                      alt=""
-                    />Classe 79
-                  </td>
-                  <td><span class="badge text-bg-danger">failed</span></td>
-                  <td>
-                    <i
-                      class="fa-solid fa-pen action-icon me-2"
-                      style="color: #8e969f"
-                    ></i
-                    ><i
-                      class="fa-solid fa-trash action-icon"
-                      style="color: #8e969f"
-                    ></i>
-                  </td>
-                  <td>20%</td>
-                  <td>19 Feb 2021</td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      id="class-logo"
-                      src="./img/class-avatar.jpg"
-                      alt=""
-                    />Classe 80
-                  </td>
-                  <td><span class="badge text-bg-success">Done</span></td>
-                  <td>
-                    <i
-                      class="fa-solid fa-pen action-icon me-2"
-                      style="color: #8e969f"
-                    ></i
-                    ><i
-                      class="fa-solid fa-trash action-icon"
-                      style="color: #8e969f"
-                    ></i>
-                  </td>
-                  <td>20%</td>
-                  <td>20 Feb 2021</td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      id="class-logo"
-                      src="./img/class-avatar.jpg"
-                      alt=""
-                    />Classe 81
-                  </td>
-                  <td><span class="badge text-bg-danger">failed</span></td>
-                  <td>
-                    <i
-                      class="fa-solid fa-pen action-icon me-2"
-                      style="color: #8e969f"
-                    ></i
-                    ><i
-                      class="fa-solid fa-trash action-icon"
-                      style="color: #8e969f"
-                    ></i>
-                  </td>
-                  <td>20%</td>
-                  <td>21 Feb 2021</td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      id="class-logo"
-                      src="./img/class-avatar.jpg"
-                      alt=""
-                    />Classe 82
-                  </td>
-                  <td><span class="badge text-bg-success">Done</span></td>
-                  <td>
-                    <i
-                      class="fa-solid fa-pen action-icon me-2"
-                      style="color: #8e969f"
-                    ></i
-                    ><i
-                      class="fa-solid fa-trash action-icon"
-                      style="color: #8e969f"
-                    ></i>
-                  </td>
-                  <td>20%</td>
-                  <td>22 Feb 2021</td>
-                </tr>
-              </tbody>
-            </table>
+        <section class="d-flex flex-wrap">
+          <div class="col-12 col-md-8">
+            <div class="w-100">
+            <div class="prossime-classi px-3 my-4">
+              <div class="card" style="width: m-auto">
+                <div class="card-header"><h3>Prossime classi</h3></div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col ">Nome</th>
+                      <th scope="col">Stato</th>
+                      <th scope="col">Azioni</th>
+                      <th scope="col">ROI</th>
+                      <th scope="col">Data inizio</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img
+                          id="class-logo"
+                          src="./img/class-avatar.jpg"
+                          alt=""
+                        />Classe 75
+                      </td>
+                      <td><span class="badge text-bg-success">Done</span></td>
+                      <td>
+                        <i
+                          class="fa-solid fa-pen action-icon me-2"
+                          style="color: #8e969f"
+                        ></i
+                        ><i
+                          class="fa-solid fa-trash action-icon"
+                          style="color: #8e969f"
+                        ></i>
+                      </td>
+                      <td>20%</td>
+                      <td>15 Feb 2021</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          id="class-logo"
+                          src="./img/class-avatar.jpg"
+                          alt=""
+                        />Classe 76
+                      </td>
+                      <td><span class="badge text-bg-success">Done</span></td>
+                      <td>
+                        <i
+                          class="fa-solid fa-pen action-icon me-2"
+                          style="color: #8e969f"
+                        ></i
+                        ><i
+                          class="fa-solid fa-trash action-icon"
+                          style="color: #8e969f"
+                        ></i>
+                      </td>
+                      <td>20%</td>
+                      <td>16 Feb 2021</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          id="class-logo"
+                          src="./img/class-avatar.jpg"
+                          alt=""
+                        />Classe 77
+                      </td>
+                      <td>
+                        <span class="badge text-bg-warning text-white"
+                          >process</span
+                        >
+                      </td>
+                      <td>
+                        <i
+                          class="fa-solid fa-pen action-icon me-2"
+                          style="color: #8e969f"
+                        ></i
+                        ><i
+                          class="fa-solid fa-trash action-icon"
+                          style="color: #8e969f"
+                        ></i>
+                      </td>
+                      <td>20%</td>
+                      <td>17 Feb 2021</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          id="class-logo"
+                          src="./img/class-avatar.jpg"
+                          alt=""
+                        />Classe 78
+                      </td>
+                      <td><span class="badge text-bg-success">Done</span></td>
+                      <td>
+                        <i
+                          class="fa-solid fa-pen action-icon me-2"
+                          style="color: #8e969f"
+                        ></i
+                        ><i
+                          class="fa-solid fa-trash action-icon"
+                          style="color: #8e969f"
+                        ></i>
+                      </td>
+                      <td>20%</td>
+                      <td>18 Feb 2021</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          id="class-logo"
+                          src="./img/class-avatar.jpg"
+                          alt=""
+                        />Classe 79
+                      </td>
+                      <td><span class="badge text-bg-danger">failed</span></td>
+                      <td>
+                        <i
+                          class="fa-solid fa-pen action-icon me-2"
+                          style="color: #8e969f"
+                        ></i
+                        ><i
+                          class="fa-solid fa-trash action-icon"
+                          style="color: #8e969f"
+                        ></i>
+                      </td>
+                      <td>20%</td>
+                      <td>19 Feb 2021</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          id="class-logo"
+                          src="./img/class-avatar.jpg"
+                          alt=""
+                        />Classe 80
+                      </td>
+                      <td><span class="badge text-bg-success">Done</span></td>
+                      <td>
+                        <i
+                          class="fa-solid fa-pen action-icon me-2"
+                          style="color: #8e969f"
+                        ></i
+                        ><i
+                          class="fa-solid fa-trash action-icon"
+                          style="color: #8e969f"
+                        ></i>
+                      </td>
+                      <td>20%</td>
+                      <td>20 Feb 2021</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          id="class-logo"
+                          src="./img/class-avatar.jpg"
+                          alt=""
+                        />Classe 81
+                      </td>
+                      <td><span class="badge text-bg-danger">failed</span></td>
+                      <td>
+                        <i
+                          class="fa-solid fa-pen action-icon me-2"
+                          style="color: #8e969f"
+                        ></i
+                        ><i
+                          class="fa-solid fa-trash action-icon"
+                          style="color: #8e969f"
+                        ></i>
+                      </td>
+                      <td>20%</td>
+                      <td>21 Feb 2021</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          id="class-logo"
+                          src="./img/class-avatar.jpg"
+                          alt=""
+                        />Classe 82
+                      </td>
+                      <td><span class="badge text-bg-success">Done</span></td>
+                      <td>
+                        <i
+                          class="fa-solid fa-pen action-icon me-2"
+                          style="color: #8e969f"
+                        ></i
+                        ><i
+                          class="fa-solid fa-trash action-icon"
+                          style="color: #8e969f"
+                        ></i>
+                      </td>
+                      <td>20%</td>
+                      <td>22 Feb 2021</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="w-100">
+            <div class="card ms-3">
+              <div class="card-header">F.A.Q.</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  Come aggiungere un nuovo studente?
+                </li>
+                <li class="list-group-item">
+                  Come posso accedere alle informazioni del mio account?
+                </li>
+                <li class="list-group-item">
+                  Posso usare questa dashboard da mobile?
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+          <div class="col-12 col-md-4">
+            <div class="content"><h2>nciao</h2></div>
+          </div>
+        </section>
       </main>
     </div>
   </body>
