@@ -28,7 +28,7 @@
         <a class="navbar-brand d-none d-md-block col col-md-1" href="#"
           ><img class="w-100" src="./img/logo.svg" alt=""
         /></a>
-        <form class="d-flex col-3 col-md-7 col-lg-10">
+        <form class="d-flex col-8 col-lg-10">
           <input
             class="form-control me-2"
             type="search"
@@ -146,13 +146,160 @@
             <h3>125</h3>
           </div>
           <div class="new-student py-2 px-2 order-0 order-md-1">
-            <p>
-              Nuovo Studente
-              <i class="fa-regular fa-square-plus fa-2xl ps-2"></i>
-            </p>
+            <button
+              class="btn text-white"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+            >
+              Nuovo studente<i
+                class="fa-regular fa-square-plus fa-2xl ps-2"
+              ></i>
+            </button>
+
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasRight"
+              aria-labelledby="offcanvasRightLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                  Inserisci un nuovo studente
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <form class="row g-3">
+                  <div class="col-md-6">
+                    <label for="inputText4" class="form-label">Nome</label>
+                    <input type="email" class="form-control" id="inputEmail4" />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputText4" class="form-label">Cognome</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputPassword4"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <div class="col-auto">
+                      <label class="form-label" for="autoSizingInputGroup"
+                        >Email</label
+                      >
+                      <div class="input-group">
+                        <div class="input-group-text">@</div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="autoSizingInputGroup"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="col-auto">
+                      <label class="form-label" for="autoSizingInputGroup"
+                        >Password</label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="autoSizingInputGroup"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="col-auto">
+                      <label class="form-label" for="autoSizingInputGroup"
+                        >Indirizzo Email</label
+                      >
+                      <div class="input-group">
+                        <div class="input-group-text">@</div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="autoSizingInputGroup"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="col-auto">
+                      <label class="form-label" for="autoSizingInputGroup"
+                        >Password</label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="autoSizingInputGroup"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="inputAddress2" class="form-label"
+                      >Indirizzo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputAddress2"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Città</label>
+                    <input type="text" class="form-control" id="inputCity" />
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState" class="form-label">Stato</label>
+                    <select id="inputState" class="form-select">
+                      <option selected>Scegli...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="inputZip" class="form-label">CAP</label>
+                    <input type="text" class="form-control" id="inputZip" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label">Foto</label>
+                    <input class="form-control" type="file" id="formFile" />
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="gridCheck"
+                      />
+                      <label class="form-check-label" for="gridCheck">
+                        Seleziona per proseguire
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Salva</button>
+                    <button type="button" class="btn btn-warning">
+                      Svuota
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
-        <section class="d-flex">
+        <section class="d-flex flex-wrap">
           <div class="col-12 col-md-8">
             <div class="w-100">
               <div class="prossime-classi px-3 my-4">
@@ -161,22 +308,24 @@
                   <table class="table">
                     <thead>
                       <tr>
-                        <th scope="col ">Nome</th>
+                        <th colspan="3" scope="col">Nome</th>
+                        <th scope="col" class="">Data inizio</th>
+                        <th scope="col" class="">ROI</th>
                         <th scope="col">Stato</th>
                         <th scope="col">Azioni</th>
-                        <th scope="col">ROI</th>
-                        <th scope="col">Data inizio</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>
+                        <td colspan="3">
                           <img
                             id="class-logo"
                             src="./img/class-avatar.jpg"
                             alt=""
                           />Classe 75
                         </td>
+                        <td>15 Feb 2021</td>
+                        <td>20%</td>
                         <td><span class="badge text-bg-success">Done</span></td>
                         <td>
                           <i
@@ -188,17 +337,17 @@
                             style="color: #8e969f"
                           ></i>
                         </td>
-                        <td>20%</td>
-                        <td>15 Feb 2021</td>
                       </tr>
                       <tr>
-                        <td>
+                        <td colspan="3">
                           <img
                             id="class-logo"
                             src="./img/class-avatar.jpg"
                             alt=""
                           />Classe 76
                         </td>
+                        <td>16 Feb 2021</td>
+                        <td>20%</td>
                         <td><span class="badge text-bg-success">Done</span></td>
                         <td>
                           <i
@@ -210,19 +359,19 @@
                             style="color: #8e969f"
                           ></i>
                         </td>
-                        <td>20%</td>
-                        <td>16 Feb 2021</td>
                       </tr>
                       <tr>
-                        <td>
+                        <td colspan="3">
                           <img
                             id="class-logo"
                             src="./img/class-avatar.jpg"
                             alt=""
                           />Classe 77
                         </td>
+                        <td>17 Feb 2021</td>
+                        <td>20%</td>
                         <td>
-                          <span class="badge text-bg-warning text-white"
+                          <span class="badge text-white text-bg-warning"
                             >process</span
                           >
                         </td>
@@ -236,17 +385,17 @@
                             style="color: #8e969f"
                           ></i>
                         </td>
-                        <td>20%</td>
-                        <td>17 Feb 2021</td>
                       </tr>
                       <tr>
-                        <td>
+                        <td colspan="3">
                           <img
                             id="class-logo"
                             src="./img/class-avatar.jpg"
                             alt=""
                           />Classe 78
                         </td>
+                        <td>18 Feb 2021</td>
+                        <td>20%</td>
                         <td><span class="badge text-bg-success">Done</span></td>
                         <td>
                           <i
@@ -258,19 +407,21 @@
                             style="color: #8e969f"
                           ></i>
                         </td>
-                        <td>20%</td>
-                        <td>18 Feb 2021</td>
                       </tr>
                       <tr>
-                        <td>
+                        <td colspan="3">
                           <img
                             id="class-logo"
                             src="./img/class-avatar.jpg"
                             alt=""
                           />Classe 79
                         </td>
+                        <td>19 Feb 2021</td>
+                        <td>20%</td>
                         <td>
-                          <span class="badge text-bg-danger">failed</span>
+                          <span class="badge text-white text-bg-danger"
+                            >failed</span
+                          >
                         </td>
                         <td>
                           <i
@@ -282,17 +433,17 @@
                             style="color: #8e969f"
                           ></i>
                         </td>
-                        <td>20%</td>
-                        <td>19 Feb 2021</td>
                       </tr>
                       <tr>
-                        <td>
+                        <td colspan="3">
                           <img
                             id="class-logo"
                             src="./img/class-avatar.jpg"
                             alt=""
                           />Classe 80
                         </td>
+                        <td>20 Feb 2021</td>
+                        <td>20%</td>
                         <td><span class="badge text-bg-success">Done</span></td>
                         <td>
                           <i
@@ -304,19 +455,21 @@
                             style="color: #8e969f"
                           ></i>
                         </td>
-                        <td>20%</td>
-                        <td>20 Feb 2021</td>
                       </tr>
                       <tr>
-                        <td>
+                        <td colspan="3">
                           <img
                             id="class-logo"
                             src="./img/class-avatar.jpg"
                             alt=""
                           />Classe 81
                         </td>
+                        <td>21 Feb 2021</td>
+                        <td>20%</td>
                         <td>
-                          <span class="badge text-bg-danger">failed</span>
+                          <span class="badge text-white text-bg-danger"
+                            >failed</span
+                          >
                         </td>
                         <td>
                           <i
@@ -328,17 +481,17 @@
                             style="color: #8e969f"
                           ></i>
                         </td>
-                        <td>20%</td>
-                        <td>21 Feb 2021</td>
                       </tr>
                       <tr>
-                        <td>
+                        <td colspan="3">
                           <img
                             id="class-logo"
                             src="./img/class-avatar.jpg"
                             alt=""
                           />Classe 82
                         </td>
+                        <td>22 Feb 2021</td>
+                        <td>20%</td>
                         <td><span class="badge text-bg-success">Done</span></td>
                         <td>
                           <i
@@ -350,8 +503,6 @@
                             style="color: #8e969f"
                           ></i>
                         </td>
-                        <td>20%</td>
-                        <td>22 Feb 2021</td>
                       </tr>
                     </tbody>
                   </table>
@@ -359,31 +510,146 @@
               </div>
             </div>
             <div class="w-100">
-              <div class="card mx-3">
+              <div class="card mx-3" style="width: m-auto">
                 <div class="card-header"><h3>F.A.Q.</h3></div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    Come aggiungere un nuovo studente?
-                  </li>
-                  <li class="list-group-item">
-                    Come posso accedere alle informazioni del mio account?
-                  </li>
-                  <li class="list-group-item">
-                    Posso usare questa dashboard da mobile?
-                  </li>
-                </ul>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Come aggiungere un nuovo studente?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Clicca sul + in alto nella sezione blu.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Come posso accedere alle informazioni del mio account?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Clicca sull'icona della campanella.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Posso usare questa dashboard da mobile?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">Si.</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-4">
             <div class="w-100">
-              <div class="card my-4 me-3">
+              <div class="card my-4 mx-3 me-md-3 mx-md-0">
                 <div class="card-header"><h3>Todo</h3></div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">ABCD</li>
-                  <li class="list-group-item">ABCD</li>
-                  <li class="list-group-item">ABCD</li>
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Kickoff nuove classi
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Lezione su Bootstrap 5 in classe #75
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Controllare username github studenti
+                      </label>
+                    </div>
+                  </li>
                 </ul>
+              </div>
+            </div>
+            <div class="w-100">
+              <div class="card mx-3 me-md-3 mx-md-0">
+                <img src="./img/stats.jpeg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Utenti attivi</h5>
+                  <p class="card-text">
+                    Lista degli utenti attivi in piattaforma nell'ultimo mese
+                  </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Gennaio: 1200</li>
+                  <li class="list-group-item">Febbario: 800</li>
+                  <li class="list-group-item">Marzo: 1500</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link"
+                    >Visualizza report approfondito</a
+                  >
+                </div>
               </div>
             </div>
           </div>
